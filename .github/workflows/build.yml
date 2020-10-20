@@ -16,5 +16,7 @@ jobs:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
-      - run: cd jp-front-end && npm ci
-      - run: ls && cd jp-front-end && ng build
+      - name: Build Angular App
+      - working-directory: jp-front-end
+      - run: npm ci
+      - run: ng build
