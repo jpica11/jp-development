@@ -17,5 +17,5 @@ jobs:
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
       - run: cd jp-front-end
-      - run: npm install
+      - run: npm ci
       - run: ng build
