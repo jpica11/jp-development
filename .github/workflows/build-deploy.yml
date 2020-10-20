@@ -1,12 +1,6 @@
 name: CI
 
-on:
-  push: 
-    branches: 
-      - master
-      - feature/aws-deploy
-  pull_request: {branches: master}
-
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,12 +13,12 @@ jobs:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
-      - name: Run Jest Tests
-        working-directory: jp-front-end
-        run: npm run test
       - name: Build Angular App
         working-directory: jp-front-end
         run: npm ci && npm run build
+      - name: Run Jest Tests
+        working-directory: jp-front-end
+        run: npm run test
       - name: Archive artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -33,6 +27,7 @@ jobs:
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
       - name: Configure AWS Credentials
