@@ -18,4 +18,4 @@ jobs:
           restore-keys: ${{runner.os}}-npm-
       - name: Build Angular App
         working-directory: jp-front-end
-        run: npm ci && ng build
+        run: npm ci && npm run build
