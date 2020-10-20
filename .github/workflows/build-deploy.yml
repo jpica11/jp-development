@@ -19,6 +19,9 @@ jobs:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
+      - name: Run Jest Tests
+        working-directory: jp-front-end
+        run: npm run test
       - name: Build Angular App
         working-directory: jp-front-end
         run: npm ci && npm run build
