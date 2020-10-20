@@ -1,10 +1,12 @@
+@import "../../styles/colors.scss";
+
 body,
 html {
   height: 100%;
 }
 
 .hero-image {
-  background-image: url("../../assets/banner.jpg");
+  background-image: url("../../assets/home-images/banner.jpg");
   background-size: cover;
   background-position: center;
 
@@ -12,4 +14,22 @@ html {
   min-height: 100vh;
   display: flex;
   position: relative;
+}
+
+.home {
+  color: $jp-white;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.home-tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 80vw;
+  min-height: 75vh;
+  padding-top: 12.5vh;
 }

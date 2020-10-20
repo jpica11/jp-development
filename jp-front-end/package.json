@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "npm install && ng build && ng serve",
+    "stop": "kill -9 $(pgrep 'ng serve')",
     "build": "ng build",
     "test": "jest",
     "test:watch": "jest --watch",
