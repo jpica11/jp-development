@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+
+.bio-page {
+  background-image: url("../../assets/bio-page.jpg");
+  background-size: cover;
+  background-position: center;
+
+  width: 80vw;
+  min-height: 100vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bio-image {
+  border-radius: 50vw;
+  border: solid;
+
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  position: relative;
+}
+
+.bio-text {
+  border-radius: 50vw;
+  border: solid;
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  position: relative;
+  background-color: rgb($jp-blue, 0.8);
+  align-items: center;
+  justify-content: center;
+
+  span {
+    color: $jp-white;
+    text-align: center;
+    font-size: 1.75vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}

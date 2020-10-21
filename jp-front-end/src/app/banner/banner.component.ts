@@ -22,16 +22,16 @@ export class BannerComponent {
       iconAlt: `Icon of a server`
     },
     {
-      skillTitle: 'Architecture and Design',
-      iconPath: '../../assets/home-images/design.jpg',
-      technology: [],
-      iconAlt: `Icon of a cloud`
-    },
-    {
       skillTitle: 'Leadership',
       iconPath: '../../assets/home-images/leadership.jpg',
       technology: [],
       iconAlt: `Icon of a puzzle piece`
+    },
+    {
+      skillTitle: 'Architecture and Design',
+      iconPath: '../../assets/home-images/design.jpg',
+      technology: [],
+      iconAlt: `Icon of a cloud`
     },
   ];
 
