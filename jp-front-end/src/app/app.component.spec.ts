@@ -1,3 +1,4 @@
+import { BioPageComponent } from './bio-page/bio-page.component';
 import { HomeTileComponent } from './home-tile/home-tile.component';
 import { BannerComponent } from './banner/banner.component';
 import { TestBed, async } from '@angular/core/testing';
@@ -13,6 +14,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent, 
         BannerComponent,
+        BioPageComponent,
         HomeTileComponent
       ],
     }).compileComponents();
