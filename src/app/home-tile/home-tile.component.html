@@ -1,0 +1,15 @@
+<div
+  class="home-tile"
+  (mouseenter)="onMouseEnter()"
+  (click)="closeModal($event)"
+>
+  <img class="home-tile-background" src="{{ iconPath }}" alt="{{ text }}" />
+  <span class="tile-name">{{ title }}</span>
+
+  <dialog #modal id="modal">
+    <button (click)="closeModal()" class="close-button">X</button>
+    <div>
+      {{ blob }}
+    </div>
+  </dialog>
+</div>
