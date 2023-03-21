@@ -1,12 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 
 @Component({
-  selector: 'jp-home-tile',
-  templateUrl: './home-tile.component.html',
-  styleUrls: ['./home-tile.component.scss']
+  selector: "jp-home-tile",
+  templateUrl: "./home-tile.component.html",
+  styleUrls: ["./home-tile.component.scss"],
 })
-export class HomeTileComponent  {
-
+export class HomeTileComponent {
+  @ViewChild("modal")
+  modal: ElementRef;
   /**
    * Title of home tile
    */
@@ -19,4 +20,22 @@ export class HomeTileComponent  {
    * Path to icon of tile background
    */
   @Input() iconPath: string;
+
+  @Input() blob: string;
+
+  onMouseEnter() {
+    if (!this.modal) {
+      return;
+    }
+    this.modal.nativeElement.showModal();
+  }
+
+  closeModal(event?: Event) {
+    if (
+      this.modal &&
+      (!event || (<HTMLElement>event.target).id.includes("modal"))
+    ) {
+      this.modal.nativeElement.close();
+    }
+  }
 }

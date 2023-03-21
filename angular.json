@@ -99,7 +99,6 @@
       }
     }
   },
-  "defaultProject": "jp-front-end",
   "cli": {
     "analytics": false
   }

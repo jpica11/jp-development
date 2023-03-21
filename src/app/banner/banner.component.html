@@ -1,12 +1,13 @@
 <div class="hero-image">
   <div class="home">
     <div class="home-tiles-container">
-        <jp-home-tile
-          *ngFor="let tile of TILES"
-          [title]="tile.skillTitle"
-          [iconPath]="tile.iconPath"
-        >
-        </jp-home-tile>
-      </div>
+      <jp-home-tile
+        *ngFor="let tile of TILES"
+        [title]="tile.skillTitle"
+        [iconPath]="tile.iconPath"
+        [blob]="tile.blob"
+      >
+      </jp-home-tile>
+    </div>
   </div>
 </div>
